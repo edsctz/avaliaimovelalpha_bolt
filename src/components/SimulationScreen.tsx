@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { CircleDashed } from 'lucide-react';
 
 interface SimulationScreenProps {
@@ -8,6 +8,10 @@ interface SimulationScreenProps {
 const SimulationScreen: React.FC<SimulationScreenProps> = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [timeLeft, setTimeLeft] = useState(10);
+
+  const completeSimulation = useCallback(() => {
+    onComplete();
+  }, [onComplete]);
 
   useEffect(() => {
     const startTime = Date.now();
@@ -23,12 +27,12 @@ const SimulationScreen: React.FC<SimulationScreenProps> = ({ onComplete }) => {
 
       if (newProgress >= 100) {
         clearInterval(interval);
-        onComplete();
+        completeSimulation();
       }
     }, 50);
 
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, [completeSimulation]);
 
   const steps = [
     "Analisando detalhes do imóvel...",

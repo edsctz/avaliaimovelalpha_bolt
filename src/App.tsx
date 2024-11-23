@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Building2, ArrowRight } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import PropertyForm from './components/PropertyForm';
 import SimulationScreen from './components/SimulationScreen';
 import ResultScreen from './components/ResultScreen';
