@@ -69,10 +69,7 @@ const ResultScreen: React.FC<ResultScreenProps> = ({ propertyData, onNext }) => 
         <p className="mt-2 text-xl font-semibold text-green-600">
           {formatCurrency(basePrice)}
         </p>
-        <p className="mt-1 text-sm text-gray-500">
-          Baseado em {propertyData.squareMeters}m² a R$10.000/m²
-        </p>
-      </div>
+        </div>
 
       <div className="h-80 mb-8">
         <ResponsiveContainer width="100%" height="100%">

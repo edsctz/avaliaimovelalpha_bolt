@@ -21,7 +21,6 @@ const PropertyTypeStep: React.FC<PropertyTypeStepProps> = ({ onSelect }) => {
         >
           <Building2 className="w-16 h-16 text-indigo-600 mb-4" />
           <span className="text-xl font-semibold text-gray-900">Apartamento</span>
-          <span className="mt-2 text-sm text-gray-500">Apartamentos e coberturas</span>
         </button>
 
         <button
@@ -30,7 +29,6 @@ const PropertyTypeStep: React.FC<PropertyTypeStepProps> = ({ onSelect }) => {
         >
           <Home className="w-16 h-16 text-indigo-600 mb-4" />
           <span className="text-xl font-semibold text-gray-900">Casa</span>
-          <span className="mt-2 text-sm text-gray-500">Casas e sobrados</span>
         </button>
       </div>
     </div>

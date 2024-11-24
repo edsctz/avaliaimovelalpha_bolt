@@ -35,3 +35,11 @@ export interface FormState {
   address: Address | null;
   details: PropertyDetails | null;
 }
+
+export interface WebhookData {
+  sessionId: string;
+  propertyData: PropertyData;
+  leadData: LeadData;
+  estimatedBasePrice: number;
+  timestamp: string;
+}
